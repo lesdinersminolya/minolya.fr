@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<meta name="theme-color" content="#FAF1C7">
+<title>Minolya — Compléments alimentaires à base de plantes</title>
+<meta name="description" content="Minolya, une gamme de 4 compléments alimentaires à base de plantes : détox, coupe-faim, brûle-graisses, fibres. Pensés et fabriqués en Occitanie. Sans prise de tête.">
+<meta name="keywords" content="minolya, complément alimentaire, brûle graisse, détox, perte de poids, plantes, Perpignan, Occitanie">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Minolya — Compléments alimentaires à base de plantes">
+<meta property="og:description" content="La cure Minolya : 4 compléments à base de plantes pour se sentir bien, sans prise de tête.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.minolya.fr">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Caveat:wght@400..700&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  color-scheme: light only;
+  --sage: #B4C492;
+  --sage-dark: #8FA770;
+  --sage-deeper: #6B8A4F;
+  --terracotta: #C99777;
+  --terracotta-dark: #A87156;
+  --cream: #F5E9B8;
+  --cream-light: #FAF1C7;
+  --ink: #2C3621;
+  --ink-soft: #4A5239;
+  --white: #FFFCF3;
+  --shadow: rgba(44, 54, 33, 0.08);
+  --shadow-strong: rgba(44, 54, 33, 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light only;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--cream-light);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 17px;
+  overflow-x: hidden;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* === HEADER === */
+.header {
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+}
+
+/* === LOGO === */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+  margin-left: -50px;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.logo-img {
+  height: 450px;
+  width: auto;
+  display: block;
+}
+
+/* Footer logo - smaller */
+.footer-brand .logo {
+  margin-left: -30px;
+}
+
+.footer-brand .logo-img {
+  height: 220px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-left: -20px;
+  }
+  .logo-img {
+    height: 220px;
+  }
+  .footer-brand .logo-img {
+    height: 150px;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--sage-deeper);
+}
+
+.nav-cta {
+  background: var(--ink);
+  color: var(--cream) !important;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-weight: 600 !important;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nav-cta:hover {
+  background: var(--sage-deeper);
+  color: var(--white) !important;
+  transform: translateY(-1px);
+}
+
+/* === HERO === */
+.hero {
+  padding: 0 0 80px;
+  position: relative;
+  margin-top: -60px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--terracotta);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(40px, 7vw, 84px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: var(--ink);
+  max-width: 900px;
+  margin-bottom: 32px;
+  font-variation-settings: "opsz" 144;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--sage-deeper);
+  font-weight: 300;
+}
+
+.hero-title .scribble {
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  color: var(--terracotta-dark);
+  font-weight: 700;
+  display: inline-block;
+  transform: rotate(-2deg);
+}
+
+.hero-sub {
+  font-size: 20px;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.btn-primary:hover {
+  background: var(--sage-deeper);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px var(--shadow-strong);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+
+.btn-secondary:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--sage-deeper);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 6px;
+}
+
+/* Decorative shapes */
+.hero-deco {
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero-deco-1 {
+  top: 20%;
+  right: 5%;
+  width: 220px;
+  height: 220px;
+  background: var(--terracotta);
+  border-radius: 50%;
+  opacity: 0.25;
+  filter: blur(1px);
+}
+
+.hero-deco-2 {
+  bottom: 15%;
+  right: 25%;
+  width: 140px;
+  height: 140px;
+  background: var(--sage);
+  border-radius: 50%;
+  opacity: 0.35;
+}
+
+/* === STORY SECTION === */
+.story {
+  padding: 80px 0;
+  background: var(--cream);
+  border-radius: 40px;
+  margin: 0 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.story-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  color: var(--terracotta-dark);
+  margin-bottom: 16px;
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+
+.story-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 28px;
+  letter-spacing: -0.5px;
+}
+
+.story-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+/* === PRODUCTS === */
+.products {
+  padding: 120px 0 60px;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.section-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 26px;
+  color: var(--terracotta-dark);
+  display: inline-block;
+  transform: rotate(-1deg);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--sage-deeper);
+}
+
+.section-sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 0 0 32px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1.5px solid transparent;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px var(--shadow);
+  border-color: var(--sage);
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--sage) 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-image-placeholder {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  color: var(--ink-soft);
+  opacity: 0.5;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.product-body {
+  padding: 28px 28px 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-number {
+  font-family: 'Fraunces', serif;
+  font-size: 90px;
+  font-weight: 300;
+  color: var(--white);
+  opacity: 0.9;
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  line-height: 1;
+  font-style: italic;
+  z-index: 2;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.product-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+  width: fit-content;
+}
+
+.tag-detox { background: rgba(180, 196, 146, 0.3); color: var(--sage-deeper); }
+.tag-appetite { background: rgba(201, 151, 119, 0.25); color: var(--terracotta-dark); }
+.tag-burn { background: rgba(168, 113, 86, 0.2); color: var(--terracotta-dark); }
+.tag-fiber { background: rgba(143, 167, 112, 0.25); color: var(--sage-deeper); }
+
+.product-name {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.product-name em {
+  font-style: italic;
+  color: var(--sage-deeper);
+}
+
+.product-desc {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.product-ingredients {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  background: var(--cream-light);
+  border-radius: 12px;
+  border-left: 3px solid var(--sage);
+}
+
+.product-ingredients strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(44, 54, 33, 0.15);
+}
+
+.product-price {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.product-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-left: 2px;
+}
+
+.product-buy {
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.product-buy:hover {
+  background: var(--sage-deeper);
+  transform: scale(1.05);
+}
+
+.product-warning {
+  font-size: 12px;
+  color: var(--terracotta-dark);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* === PACK CURE === */
+.pack {
+  background: linear-gradient(135deg, var(--sage-deeper) 0%, var(--sage-dark) 100%);
+  border-radius: 32px;
+  padding: 60px 40px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.pack::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: var(--terracotta);
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+.pack::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -50px;
+  width: 250px;
+  height: 250px;
+  background: var(--cream);
+  opacity: 0.15;
+  border-radius: 50%;
+}
+
+.pack-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.pack-badge {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.pack-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.pack-title em {
+  font-style: italic;
+  font-family: 'Caveat', cursive;
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.pack-text {
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.92;
+  margin-bottom: 28px;
+}
+
+.pack-list {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.pack-list li {
+  padding: 8px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pack-list li::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: var(--cream);
+  color: var(--sage-deeper);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pack-price-block {
+  background: rgba(255, 252, 243, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 252, 243, 0.2);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+}
+
+.pack-image {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.pack-price-old {
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.pack-price-new {
+  font-family: 'Fraunces', serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pack-price-new span {
+  font-size: 24px;
+}
+
+.pack-save {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: var(--cream);
+}
+
+.pack-cta {
+  display: block;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 18px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.pack-cta:hover {
+  background: var(--ink);
+  color: var(--cream);
+  transform: scale(1.02);
+}
+
+/* === HOW IT WORKS === */
+.how {
+  padding: 100px 0;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.how-step {
+  text-align: center;
+  position: relative;
+}
+
+.how-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--terracotta);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.how-step h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.how-step p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* === FAQ === */
+.faq {
+  padding: 80px 0;
+  background: var(--cream);
+  border-radius: 40px;
+  margin: 0 24px 80px;
+}
+
+.faq-grid {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(44, 54, 33, 0.12);
+  padding: 20px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+  list-style: none;
+  padding: 4px 0;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--sage-deeper);
+  transition: transform 0.2s;
+}
+
+details[open] .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+/* === FOOTER === */
+.footer {
+  padding: 60px 0 40px;
+  border-top: 1px solid rgba(44, 54, 33, 0.1);
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand .logo {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.footer-brand p {
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.footer-col h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: var(--sage-deeper);
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(44, 54, 33, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.disclaimer {
+  font-size: 11px;
+  color: var(--ink-soft);
+  opacity: 0.7;
+  margin-top: 20px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .nav-cta {
+    display: inline-flex !important;
+  }
+
+  .nav { display: flex; }
+  .nav a:not(.nav-cta) { display: none; }
+
+  .hero {
+    padding: 40px 0 60px;
+  }
+
+  .hero-stats {
+    gap: 24px;
+  }
+
+  .pack {
+    padding: 40px 28px;
+  }
+
+  .pack-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pack-price-new {
+    font-size: 56px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero-deco-1, .hero-deco-2 {
+    display: none;
+  }
+
+  .story, .faq {
+    margin: 0 12px;
+    border-radius: 28px;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+}
+
+/* Reveal on scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Minolya">
+        <img src="images/logo.png" alt="Minolya" class="logo-img">
+      </a>
+      <nav class="nav">
+        <a href="#produits">Les produits</a>
+        <a href="#cure">La cure</a>
+        <a href="#faq">FAQ</a>
+        <a href="#cure" class="nav-cta">Commander</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-deco hero-deco-1"></div>
+  <div class="hero-deco hero-deco-2"></div>
+  <div class="container">
+    <span class="hero-badge">✦ Compléments à base de plantes</span>
+    <h1 class="hero-title">
+      Se sentir bien,<br>
+      <em>sans</em><br>
+      <span class="scribble">prise de tête.</span>
+    </h1>
+    <p class="hero-sub">
+      Minolya, c'est une gamme de quatre compléments alimentaires à base de plantes,
+      pensés et fabriqués à Latour-Bas-Elne. Une formulation sérieuse, un ton qui l'est moins.
+    </p>
+    <div class="hero-cta-row">
+      <a href="#cure" class="btn btn-primary">Découvrir la cure complète →</a>
+      <a href="#produits" class="btn btn-secondary">Voir les produits</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Produits complémentaires</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">À base de plantes</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">66</div>
+        <div class="stat-label">Made in Occitanie</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-inner">
+    <span class="story-eyebrow">L'histoire</span>
+    <h2 class="story-title">
+      Née d'une idée simple : et si on arrêtait de se prendre au sérieux ?
+    </h2>
+    <p class="story-text">
+      Minolya, c'est une gamme de compléments à base de plantes que j'ai créée avec l'envie de
+      proposer autre chose que le discours culpabilisant habituel sur la perte de poids.
+      Parce que "Incinérateur de Lipides" sonne mieux que "régime n°47", non ?
+    </p>
+    <p class="story-text">
+      Des plantes simples, des formulations claires, des noms qui font sourire.
+      Le tout pensé et fabriqué dans les Pyrénées-Orientales, avec amour et un brin d'humour.
+    </p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="produits">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Les 4 produits</span>
+      <h2 class="section-title">Une <em>cure complète</em>,<br>en quatre étapes.</h2>
+      <p class="section-sub">Chaque produit a sa fonction. Ensemble, ils forment un parcours cohérent. Séparément, ils marchent aussi.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- Détoxi-Boost -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/detoxi-boost.png" alt="Détoxi-Boost Minolya" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;product-image-placeholder&quot;>Photo du produit<br>à venir</div>';">
+          <div class="product-number">1</div>
+        </div>
+        <div class="product-body">
+          <span class="product-tag tag-detox">Détox</span>
+          <h3 class="product-name">Détoxi-<em>Boost</em></h3>
+          <p class="product-desc">Le coup d'envoi. Sirop liquide arôme citron pour aider l'organisme à se nettoyer avant d'attaquer la cure.</p>
+          <div class="product-ingredients">
+            <strong>À base de :</strong> pissenlit, artichaut, radis noir, chicorée, chlorella. 200 ml.
+          </div>
+          <div class="product-footer">
+            <div class="product-price">16€<span>/flacon</span></div>
+            <a href="#" class="product-buy" data-product="detoxi-boost">Commander</a>
+          </div>
+          <p class="product-warning">À consommer avant juillet 2026.</p>
+        </div>
+      </article>
+
+      <!-- Dompteur -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/dompteur.png" alt="Dompteur de Gourmandise Minolya" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;product-image-placeholder&quot;>Photo du produit<br>à venir</div>';">
+          <div class="product-number">2</div>
+        </div>
+        <div class="product-body">
+          <span class="product-tag tag-appetite">Coupe-faim</span>
+          <h3 class="product-name">Dompteur de <em>Gourmandise</em></h3>
+          <p class="product-desc">Pour les fringales du goûter et les grignotages du soir. Poudre arôme poire à diluer.</p>
+          <div class="product-ingredients">
+            <strong>À base de :</strong> extrait de maïs, glucomannane (fibres de konjac), édulcorant naturel.
+          </div>
+          <div class="product-footer">
+            <div class="product-price">19€<span>/pot</span></div>
+            <a href="#" class="product-buy" data-product="dompteur">Commander</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Incinérateur -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/incinerateur.png" alt="Incinérateur de Lipides Minolya" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;product-image-placeholder&quot;>Photo du produit<br>à venir</div>';">
+          <div class="product-number">3</div>
+        </div>
+        <div class="product-body">
+          <span class="product-tag tag-burn">Brûle-graisses</span>
+          <h3 class="product-name">Incinérateur <em>de Lipides</em></h3>
+          <p class="product-desc">L'allié énergie & métabolisme. 60 gélules végétales, 2 le matin + 2 le midi.</p>
+          <div class="product-ingredients">
+            <strong>À base de :</strong> thé vert (EGCG), guarana, maté vert (Yerba). 22,6 g.
+          </div>
+          <div class="product-footer">
+            <div class="product-price">19€<span>/pot</span></div>
+            <a href="#" class="product-buy" data-product="incinerateur">Commander</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Radar -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/radar.png" alt="Radar de Bouée Minolya" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;product-image-placeholder&quot;>Photo du produit<br>à venir</div>';">
+          <div class="product-number">4</div>
+        </div>
+        <div class="product-body">
+          <span class="product-tag tag-fiber">Fibres</span>
+          <h3 class="product-name">Radar de <em>Bouée</em></h3>
+          <p class="product-desc">Après les repas un peu trop riches. Le nopal capte graisses et sucres, la choline soutient le métabolisme.</p>
+          <div class="product-ingredients">
+            <strong>À base de :</strong> Neopuntia™ (nopal breveté) et choline bitartrate. 60 gélules, 38,7 g.
+          </div>
+          <div class="product-footer">
+            <div class="product-price">19€<span>/pot</span></div>
+            <a href="#" class="product-buy" data-product="radar">Commander</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- PACK CURE -->
+    <div class="pack" id="cure">
+      <div class="pack-inner">
+        <div class="pack-content">
+          <span class="pack-badge">⭐ La meilleure offre</span>
+          <h2 class="pack-title">
+            La <em>Cure Complète</em><br>
+            Minolya
+          </h2>
+          <p class="pack-text">
+            Les 4 produits réunis pour suivre le parcours complet. Détox, coupe-faim, brûle-graisses et fibres : tout y est.
+          </p>
+          <ul class="pack-list">
+            <li>1 × Détoxi-Boost (sirop 200 ml)</li>
+            <li>1 × Dompteur de Gourmandise (pot)</li>
+            <li>1 × Incinérateur de Lipides (60 gélules)</li>
+            <li>1 × Radar de Bouée (60 gélules)</li>
+          </ul>
+        </div>
+        <div class="pack-price-block">
+          <img src="images/pack-cure.png" alt="La cure complète Minolya" class="pack-image" onerror="this.style.display='none';">
+          <div class="pack-price-old">73€ à l'unité</div>
+          <div class="pack-price-new">60<span>€</span></div>
+          <div class="pack-save">Tu économises 13€ ✨</div>
+          <a href="#" class="pack-cta" data-product="pack-cure">Commander la cure →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Comment ça marche</span>
+      <h2 class="section-title">Simple, <em>rapide</em>, transparent.</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <h3>Tu choisis</h3>
+        <p>La cure complète ou un produit à l'unité. Paiement sécurisé via Stripe.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <h3>J'expédie</h3>
+        <p>Préparation et envoi sous 48h depuis Latour-Bas-Elne (Mondial Relay ou Colissimo).</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <h3>Tu reçois</h3>
+        <p>3 à 5 jours plus tard, tes produits arrivent. Une notice est glissée dans le colis.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">4</div>
+        <h3>Tu testes</h3>
+        <p>Tu suis les conseils d'utilisation. Et si tu as une question, tu m'écris directement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Vos questions</span>
+      <h2 class="section-title">À savoir <em>avant</em> de commander.</h2>
+    </div>
+
+    <div class="faq-grid">
+
+      <details class="faq-item">
+        <summary class="faq-question">Qu'est-ce que Minolya ?</summary>
+        <div class="faq-answer">
+          Minolya, c'est une marque de compléments alimentaires à base de plantes, pensée et fabriquée à Latour-Bas-Elne dans les Pyrénées-Orientales. La gamme se compose de 4 produits complémentaires (détox, coupe-faim, brûle-graisses, fibres) qui peuvent être pris en cure ou séparément. L'idée de départ : proposer quelque chose de sérieux dans la formulation, mais léger dans le ton.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Ces produits font-ils maigrir ?</summary>
+        <div class="faq-answer">
+          Soyons honnêtes : aucun complément alimentaire ne fait maigrir tout seul. Ces produits sont des soutiens, à prendre dans le cadre d'une alimentation variée et équilibrée et d'un mode de vie sain. Les plantes utilisées (thé vert, guarana, maté, nopal, pissenlit, artichaut...) peuvent accompagner le métabolisme, mais elles ne remplacent jamais une bonne hygiène de vie.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Y a-t-il des contre-indications ?</summary>
+        <div class="faq-answer">
+          Oui. Ces produits sont déconseillés aux femmes enceintes ou allaitantes, aux enfants, et aux personnes sous traitement médical (notamment thyroïde, troubles cardiaques, biliaires ou rénaux). En cas de doute, demandez conseil à votre médecin. Les contre-indications complètes sont indiquées sur chaque pot.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Puis-je prendre les 4 produits en même temps ?</summary>
+        <div class="faq-answer">
+          Oui, c'est même l'idée de la cure complète. Chaque produit a une fonction spécifique et un moment de prise différent (matin, midi, après les repas). Suivez les conseils d'utilisation indiqués sur chaque pot. En cas de doute ou de traitement médical en cours, parlez-en à votre médecin.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Combien coûte la livraison ?</summary>
+        <div class="faq-answer">
+          Mondial Relay : 4,90€. Colissimo à domicile : 6,90€. Livraison offerte à partir de 70€ d'achat (donc incluse pour la cure complète). Délai 3 à 5 jours ouvrés.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Puis-je retourner les produits ?</summary>
+        <div class="faq-answer">
+          Conformément à la loi française, vous disposez d'un droit de rétractation de 14 jours pour les produits non ouverts. Une fois le sceau brisé, pour des raisons sanitaires évidentes liées aux compléments alimentaires, le retour n'est plus possible.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Qui est derrière Minolya ?</summary>
+        <div class="faq-answer">
+          Minolya a été créée par Julie, entrepreneuse basée en Occitanie. Elle développe également Les Dîners Minolya, un concept d'événements féminins en région perpignanaise. Pour en savoir plus sur Les Dîners, c'est par ici : <a href="https://lesdinersminolya.com" style="color: var(--sage-deeper); text-decoration: underline;">lesdinersminolya.com</a>.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="Minolya">
+          <img src="images/logo.png" alt="Minolya" class="logo-img">
+        </a>
+        <p>Compléments alimentaires à base de plantes, conçus avec amour à Latour-Bas-Elne (66). Pour se sentir bien, sans prise de tête.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#produits">Les produits</a></li>
+          <li><a href="#cure">La cure complète</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="mailto:contact@minolya.fr">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Minolya — 22 avenue de St Cyprien H3, 66200 Latour-Bas-Elne</div>
+      <div>Site by ❤</div>
+    </div>
+    <p class="disclaimer">
+      Les compléments alimentaires ne sont pas des médicaments et ne peuvent être utilisés comme substituts d'un régime alimentaire varié et équilibré ni d'un mode de vie sain. À tenir hors de portée des jeunes enfants. Demandez conseil à votre médecin en cas de doute.
+    </p>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.product-card, .how-step, .faq-item, .story-inner, .pack');
+revealEls.forEach(el => el.classList.add('reveal'));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+revealEls.forEach(el => observer.observe(el));
+
+// Product buttons -> Stripe links (à brancher)
+// Remplace l'URL par tes Payment Links Stripe une fois créés
+const stripeLinks = {
+  'detoxi-boost': 'https://buy.stripe.com/28EeVc84f3PfdNw9fqfUQ00',
+  'dompteur': 'https://buy.stripe.com/dRmeVcacndpP4cW9fqfUQ01',
+  'incinerateur': 'https://buy.stripe.com/6oUbJ0ckv71rgZIdvGfUQ04',
+  'radar': 'https://buy.stripe.com/aFa00i5W799zeRA3V6fUQ03',
+  'pack-cure': 'https://buy.stripe.com/8x2bJ01FRgC1fVEfDOfUQ02'
+};
+
+document.querySelectorAll('[data-product]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const product = btn.dataset.product;
+    const url = stripeLinks[product];
+    if (url && url.startsWith('https://')) {
+      window.location.href = url;
+    } else {
+      alert('Lien de paiement bientôt disponible ! Pour commander dès maintenant, écris-moi à contact@minolya.fr');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
